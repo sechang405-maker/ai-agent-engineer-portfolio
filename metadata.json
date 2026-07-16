@@ -1,0 +1,6 @@
+{
+  "name": "AI 에이전트 엔지니어 포트폴리오",
+  "description": "업무에 작동하는 AI 에이전트를 설계하고 조직의 AI 전환을 이끄는 실전형 AI 엔지니어 겸 사업가의 개인 브랜딩 및 컨설팅 포트폴리오",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
