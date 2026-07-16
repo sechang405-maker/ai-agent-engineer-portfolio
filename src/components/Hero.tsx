@@ -80,7 +80,16 @@ export default function Hero({ onContactClick, onFrameworkClick }: HeroProps) {
                 <span>PDF RAG 챗봇 데모 실행</span>
               </a>
             </div>
-
+              <a
+  href="https://cosmomate-weyzwbdjcyvwamskyxsd7y.streamlit.app/"
+  target="_blank"
+  rel="noreferrer"
+  className="flex items-center justify-center space-x-2 rounded border border-primary-green/50 bg-primary-green/5 px-6 py-3.5 text-sm font-semibold text-primary-soft hover:bg-primary-green/15 hover:border-primary-green transition-colors cursor-pointer"
+  id="hero-cosmomate-link"
+>
+  <Sparkles className="h-4 w-4" />
+  <span>CosmoMate 우주 과학 챗봇 실행</span>
+</a>
             {/* Core Values Indicators */}
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-hairline/60">
               <div>
