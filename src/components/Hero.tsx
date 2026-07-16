@@ -69,16 +69,6 @@ export default function Hero({ onContactClick, onFrameworkClick }: HeroProps) {
                 <ChevronRight className="h-4 w-4 text-mute" />
               </button>
 
-              <a
-                href="https://deploy-rkim5oimlgy2vdf7nfbdah.streamlit.app/"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center space-x-2 rounded border border-primary-green/50 bg-primary-green/5 px-6 py-3.5 text-sm font-semibold text-primary-soft hover:bg-primary-green/15 hover:border-primary-green transition-colors cursor-pointer"
-                id="hero-rag-demo-link"
-              >
-                <Sparkles className="h-4 w-4" />
-                <span>PDF RAG 챗봇 데모 실행</span>
-              </a>
             </div>
               <a
   href="https://cosmomate-weyzwbdjcyvwamskyxsd7y.streamlit.app/"
