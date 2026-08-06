@@ -162,7 +162,7 @@ st.markdown(
     <style>
     /* Streamlit 표의 한글 글리프가 환경별 기본 폰트에 의존하지 않도록 지정 */
     html, body, [data-testid="stAppViewContainer"],
-    [data-testid="stDataFrame"] {
+    [data-testid="stDataFrame"], [data-testid="stTable"] {
         font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic",
                      "Apple SD Gothic Neo", sans-serif;
     }
@@ -237,7 +237,8 @@ with tab1:
                     "2위 장르": list(probs.keys())[1],
                     "고신뢰도": "✓" if probs[top_g] >= 0.5 else "△",
                 })
-            st.dataframe(pd.DataFrame(result_rows))
+            # 정적 결과표는 브라우저의 일반 텍스트 렌더링을 사용해 한글 폰트를 안정적으로 적용
+            st.table(pd.DataFrame(result_rows))
             # grouped bar chart
             import numpy as np_inner
             x = np_inner.arange(len(GENRES))
@@ -261,7 +262,7 @@ with tab2:
     st.subheader("예측 이력")
     if st.session_state["history"]:
         df_h = pd.DataFrame(st.session_state["history"])
-        st.dataframe(df_h, use_container_width=True)
+        st.table(df_h)
         if st.button("이력 초기화"):
             st.session_state["history"] = []
             st.rerun()
