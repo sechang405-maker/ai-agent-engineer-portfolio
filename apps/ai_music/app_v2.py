@@ -42,6 +42,23 @@ def setup_korean_font():
     for font_path in font_files.get(system, []):
         if Path(font_path).exists():
             fm.fontManager.addfont(font_path)
+
+    # Linux 배포 환경에서는 폰트 family 이름 탐색보다 실제 파일을 직접 지정하는 편이
+    # Matplotlib의 한글 글리프 누락(네모 표시)을 확실하게 피할 수 있습니다.
+    if system == "Linux":
+        linux_font_candidates = [
+            "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
+            "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf",
+        ]
+        for font_path in linux_font_candidates:
+            if Path(font_path).exists():
+                fm.fontManager.addfont(font_path)
+                chosen = fm.FontProperties(fname=font_path).get_name()
+                matplotlib.rcParams["font.family"] = chosen
+                matplotlib.rcParams["font.sans-serif"] = [chosen]
+                matplotlib.rcParams["axes.unicode_minus"] = False
+                return chosen
+
     available = {f.name for f in fm.fontManager.ttflist}
     chosen = next((font for font in preferred.get(system, []) if font in available), None)
     # Streamlit Cloud 배포(Linux) 환경엔 한글 폰트가 기본 설치돼 있지 않을 수 있어,
