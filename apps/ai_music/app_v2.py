@@ -47,6 +47,7 @@ def setup_korean_font():
     # Matplotlib의 한글 글리프 누락(네모 표시)을 확실하게 피할 수 있습니다.
     if system == "Linux":
         linux_font_candidates = [
+            str(Path(__file__).resolve().parent / "fonts" / "NotoSansKR-VF.ttf"),
             "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
             "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf",
         ]
