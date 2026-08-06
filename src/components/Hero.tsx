@@ -90,6 +90,16 @@ export default function Hero({ onContactClick, onFrameworkClick }: HeroProps) {
               <Music2 className="h-4 w-4" />
               <span>AI 음악 장르 예측기 실행</span>
             </a>
+            <a
+              href="https://ai-agent-engineer-portfolio-2hay.streamlit.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center space-x-2 rounded border border-primary-green/50 bg-primary-green/5 px-6 py-3.5 text-sm font-semibold text-primary-soft hover:bg-primary-green/15 hover:border-primary-green transition-colors cursor-pointer"
+              id="hero-ai-music-basic-link"
+            >
+              <Music2 className="h-4 w-4" />
+              <span>AI 음악 장르 예측기 기본 버전 실행</span>
+            </a>
             {/* Core Values Indicators */}
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-hairline/60">
               <div>
