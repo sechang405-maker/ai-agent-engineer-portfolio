@@ -157,6 +157,19 @@ def plot_melspectrogram(wav_path, title=""):
 # Streamlit UI
 # ══════════════════════════════════════════════════════════
 st.set_page_config(page_title="장르 예측 v2", page_icon="🎵", layout="wide")
+st.markdown(
+    """
+    <style>
+    /* Streamlit 표의 한글 글리프가 환경별 기본 폰트에 의존하지 않도록 지정 */
+    html, body, [data-testid="stAppViewContainer"],
+    [data-testid="stDataFrame"] {
+        font-family: "Noto Sans KR", "NanumGothic", "Malgun Gothic",
+                     "Apple SD Gothic Neo", sans-serif;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 st.title("🎵 장르 예측기 v2 — 신뢰도 + 이력 + 멀티파일 비교")
 st.caption("AI Human 개발자 과정 강사 김생근 · 7강 실습 — 6강 앱 업그레이드")
 
