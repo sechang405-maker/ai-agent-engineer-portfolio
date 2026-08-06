@@ -78,7 +78,7 @@ export default function Hero({ onContactClick, onFrameworkClick }: HeroProps) {
   id="hero-cosmomate-link"
 >
   <Sparkles className="h-4 w-4" />
-  <span>CosmoMate 우주 과학 챗봇 실행</span>
+  <span>CosmoMate 우주 과학 챗봇 실행 · REBOOTED</span>
 </a>
             <a
               href="https://ai-agent-engineer-portfolio-zkf.streamlit.app/"
